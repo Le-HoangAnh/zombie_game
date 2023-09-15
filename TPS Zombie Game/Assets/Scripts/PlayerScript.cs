@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     public float gravity = -9.81f;
     public Animator animator;
 
-    [Header("Player fumping and velocity")]
+    [Header("Player jumping and velocity")]
     public float turnCalmTime = 0.1f;
     float turnCalmVelocity;
     public float jumpRange = 1f;

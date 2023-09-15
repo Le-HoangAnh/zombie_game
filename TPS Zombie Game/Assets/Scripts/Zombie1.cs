@@ -24,17 +24,17 @@ public class Zombie1 : MonoBehaviour
     float walkingPointRadius = 2;
 
     [Header("Zombie Attacking Var")]
-    public float timeBtwAttack;
+    public float timeBtwAttack;      //time between attack
     bool previouslyAttack;
 
     [Header("Zombie Animation")]
     public Animator anim;
 
     [Header("Zombie mood/states")]
-    public float visionRadius;
-    public float attackingRadius;
-    public bool playerInvisionRadius;
-    public bool playerInattackingRadius;
+    public float visionRadius;             //ban kinh tam nhin
+    public float attackingRadius;          //ban kinh tan cong
+    public bool playerInvisionRadius;      //ban kinh tam nhin Player cua Zombie
+    public bool playerInattackingRadius;   //ban kinh tan cong Player cua Zombie
 
     private void Awake()
     {

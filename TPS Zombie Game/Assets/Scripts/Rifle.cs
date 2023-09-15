@@ -15,8 +15,8 @@ public class Rifle : MonoBehaviour //rifle: sung truong
     public Transform hand;
 
     [Header("Rifle Ammunition and shooting")] 
-    private int maximumAmmunition = 32; //Ammunition: đạn dược
-    public int mag = 10; //Magazine(mag): kho đạn dược
+    private int maximumAmmunition = 32;   //Ammunition: đạn dược
+    public int mag = 10;                  //Magazine(mag): kho đạn dược
     private int presentAmmunition;
     public float reloadingTime = 1.3f;
     private bool setReloading = false;

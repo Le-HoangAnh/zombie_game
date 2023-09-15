@@ -418,6 +418,7 @@
 "Assets/Scripts/SwitchCamera.cs"
 "Assets/Scripts/Zombie1.cs"
 "Assets/Scripts/Zombie2.cs"
+"Assets/Scripts/ZombieSpawn.cs"
 -langversion:9.0
 
 /deterministic
