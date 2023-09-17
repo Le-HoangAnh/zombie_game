@@ -416,6 +416,7 @@
 "Assets/Scripts/Rifle.cs"
 "Assets/Scripts/RiflePickup.cs"
 "Assets/Scripts/SwitchCamera.cs"
+"Assets/Scripts/VehicleController.cs"
 "Assets/Scripts/Zombie1.cs"
 "Assets/Scripts/Zombie2.cs"
 "Assets/Scripts/ZombieSpawn.cs"
