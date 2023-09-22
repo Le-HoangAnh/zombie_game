@@ -5,9 +5,10 @@ using UnityEngine;
 public class RiflePickup : MonoBehaviour
 {
     [Header("Rifle's")]
-    public GameObject PlayerRifle;
-    public GameObject PickupRifle;
+    public GameObject playerRifle;
+    public GameObject pickupRifle;
     public PlayerPunch playerPunch;
+    public GameObject rifleUI;
 
     [Header("Rifle Assign Things")]
     public PlayerScript player;
@@ -18,7 +19,8 @@ public class RiflePickup : MonoBehaviour
 
     private void Awake()
     {
-        PlayerRifle.SetActive(false);
+        playerRifle.SetActive(false);
+        rifleUI.SetActive(false);
     }
 
     private void Update()
@@ -41,8 +43,8 @@ public class RiflePickup : MonoBehaviour
         {
             if (Input.GetKeyDown("f"))
             {
-                PlayerRifle.SetActive(true);
-                PickupRifle.SetActive(false);
+                playerRifle.SetActive(true);
+                pickupRifle.SetActive(false);
                 //sound
 
                 //objective completed

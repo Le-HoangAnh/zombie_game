@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Player Script Cameras")]
     public Transform playerCamera;
+    public GameObject EndGameMenuUI;
 
     [Header("Player Animator and Gravity")]
     public CharacterController cC;
@@ -51,14 +52,14 @@ public class PlayerScript : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         cC.Move(velocity * Time.deltaTime);
 
-        playerMove();
+        PlayerMove();
 
         Jump();
 
         Sprint();
     }
 
-    void playerMove()
+    void PlayerMove()
     {
         float horizontal_axis = Input.GetAxisRaw("Horizontal");
         float vertical_axis = Input.GetAxisRaw("Vertical");
@@ -147,6 +148,7 @@ public class PlayerScript : MonoBehaviour
 
     private void PlayerDie()
     {
+        EndGameMenuUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Object.Destroy(gameObject, 1.0f);
     }
@@ -154,7 +156,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator PlayerDamage()
     {
         playerDamage.SetActive(true);
-        yield return new WaitForSeconds(2.18f);
+        yield return new WaitForSeconds(0.2f);
         playerDamage.SetActive(false);
     }
 }

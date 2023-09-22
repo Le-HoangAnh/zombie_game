@@ -13,6 +13,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
     public Animator animator;
     public PlayerScript player;
     public Transform hand;
+    public GameObject rifleUI;
 
     [Header("Rifle Ammunition and shooting")] 
     private int maximumAmmunition = 32;   //Ammunition: đạn dược
@@ -29,6 +30,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
     private void Awake()
     {
         transform.SetParent(hand);
+        rifleUI.SetActive(true);
         presentAmmunition = maximumAmmunition;
     }
 
@@ -85,6 +87,8 @@ public class Rifle : MonoBehaviour //rifle: sung truong
             mag--;
         }
         //updating the UI
+        AmmoCourt.occurrence.UpdateAmmoText(presentAmmunition);
+        AmmoCourt.occurrence.UpdateMagText(mag);
 
         muzzleSpark.Play();
         RaycastHit hitInfo;
