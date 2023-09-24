@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MainMenu.unity
+- path: Assets/Flooded_Grounds/Scenes/ZombieLand1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
