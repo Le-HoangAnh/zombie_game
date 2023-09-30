@@ -45,6 +45,7 @@ public class VehicleController : MonoBehaviour
     private float giveDamageOf = 1000f;
     public GameObject goreEffect;
 
+
     private void Update()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < radius)
@@ -54,6 +55,7 @@ public class VehicleController : MonoBehaviour
                 isOpened = true;
                 radius = 5000f;
                 //Objective complete
+                ObjectiveComplete.occurrence.GetObjectivesDone(true, true, true, false);
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {
