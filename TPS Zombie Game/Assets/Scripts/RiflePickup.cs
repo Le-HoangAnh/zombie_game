@@ -16,19 +16,13 @@ public class RiflePickup : MonoBehaviour
     public Animator animator;
     private float nextTimeToPunch = 0f;
     public float punchCharge = 15f;
-    private bool obj1;
-    private bool obj2;
-    private bool obj3;
-    private bool obj4;
+    public ObjectiveComplete mission;
+    
 
     private void Awake()
     {
         playerRifle.SetActive(false);
         rifleUI.SetActive(false);
-        obj1 = false;
-        obj2 = false;
-        obj3 = false;
-        obj4 = false;
     }
 
     private void Update()
@@ -56,11 +50,8 @@ public class RiflePickup : MonoBehaviour
                 //sound
 
                 //objective completed
-                if (obj1 == true)
-                {
-                    ObjectiveComplete.occurrence.GetObjectivesDone(obj1 ,obj2, obj3, obj4);
-                }
-                //ObjectiveComplete.occurrence.GetObjectivesDone(true, false, false, false);
+                mission.obj1 = true;
+                mission.GetObjectivesDone(true, false, false, false);
             }
         }
     }

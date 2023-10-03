@@ -55,7 +55,7 @@ public class VehicleController : MonoBehaviour
                 isOpened = true;
                 radius = 5000f;
                 //Objective complete
-                ObjectiveComplete.occurrence.GetObjectivesDone(true, true, true, false);
+                //ObjectiveComplete.occurrence.GetObjectivesDone(true, true, true, false);
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {

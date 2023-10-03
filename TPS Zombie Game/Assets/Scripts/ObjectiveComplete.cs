@@ -11,12 +11,11 @@ public class ObjectiveComplete : MonoBehaviour
     public Text objective3;
     public Text objective4;
 
-    public static ObjectiveComplete occurrence;
-
-    private void Awake()
-    {
-        occurrence = this;
-    }
+    [Header("Mission Completed")]
+    public bool obj1 = false;
+    public bool obj2 = false;
+    public bool obj3 = false;
+    public bool obj4 = false;
 
     public void GetObjectivesDone(bool obj1, bool obj2, bool obj3, bool obj4)
     {
@@ -38,7 +37,7 @@ public class ObjectiveComplete : MonoBehaviour
         }
         else
         {
-            objective2.text = "2. Find villagers";
+            objective2.text = "2. Locate the villagers";
             objective2.color = Color.white;
         }
 
@@ -55,7 +54,7 @@ public class ObjectiveComplete : MonoBehaviour
 
         if (obj4 == true)
         {
-            objective4.text = "4. Completed";
+            objective4.text = "4. Mission Completed";
             objective4.color = Color.green;
         }
         else

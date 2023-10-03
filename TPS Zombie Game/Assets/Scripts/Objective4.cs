@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Objective4 : MonoBehaviour
 {
+    public ObjectiveComplete mission;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Vehicle")
         {
             //complete objective
-            ObjectiveComplete.occurrence.GetObjectivesDone(true, true, true, true);
+            mission.obj4 = true;
+            mission.GetObjectivesDone(true, true, true, true);
 
             SceneManager.LoadScene("MainMenu");
         }

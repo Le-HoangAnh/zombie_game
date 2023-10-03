@@ -27,6 +27,9 @@ public class Rifle : MonoBehaviour //rifle: sung truong
     public GameObject WoodedEffect;
     public GameObject goreEffect;
 
+    [Header("Sounds and UI")]
+    public GameObject AmmoOutUI;
+
     private void Awake()
     {
         transform.SetParent(hand);
@@ -78,6 +81,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
         if (mag == 0)
         {
             //show ammo out text
+            StartCoroutine(ShowAmmoOut());
             return;
         }
         presentAmmunition--;
@@ -137,5 +141,12 @@ public class Rifle : MonoBehaviour //rifle: sung truong
         player.playerSpeed = 1.9f;
         player.playerSprint = 3f;
         setReloading = false;
+    }
+
+    IEnumerator ShowAmmoOut()
+    {
+        AmmoOutUI.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        AmmoOutUI.SetActive(false);
     }
 }
