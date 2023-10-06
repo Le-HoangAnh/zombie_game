@@ -29,6 +29,9 @@ public class Rifle : MonoBehaviour //rifle: sung truong
 
     [Header("Sounds and UI")]
     public GameObject AmmoOutUI;
+    public AudioClip shootingSound;
+    public AudioClip reloadingSound;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -95,6 +98,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
         AmmoCourt.occurrence.UpdateMagText(mag);
 
         muzzleSpark.Play();
+        audioSource.PlayOneShot(shootingSound);
         RaycastHit hitInfo;
 
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hitInfo, shootingRange))
@@ -134,7 +138,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
         setReloading = true;
         Debug.Log("Reloading...");
         animator.SetBool("Reloading", true);
-        //play reload sound
+        audioSource.PlayOneShot(reloadingSound);
         yield return new WaitForSeconds(reloadingTime);
         animator.SetBool("Reloading", false);
         presentAmmunition = maximumAmmunition;
