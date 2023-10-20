@@ -410,6 +410,7 @@
 "Assets/JMO Assets/WarFX/Scripts/WFX_BulletHoleDecal.cs"
 "Assets/JMO Assets/WarFX/Scripts/WFX_LightFlicker.cs"
 "Assets/JMO Assets/WarFX/Spawn System/CFX_SpawnSystem.cs"
+"Assets/Scripts/AmmoBoost.cs"
 "Assets/Scripts/AmmoCourt.cs"
 "Assets/Scripts/FootStepSound.cs"
 "Assets/Scripts/HealthBar.cs"
