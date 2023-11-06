@@ -19,8 +19,8 @@ public class Zombie1 : MonoBehaviour
     public LayerMask PlayerLayer;
 
     [Header("Zombie Guarding Var")]
-    public GameObject[] walkPoints;
-    int currentZombiePosition = 0;
+    //public GameObject[] walkPoints;
+    //int currentZombiePosition = 0;
     public float zombieSpeed;
     float walkingPointRadius = 2;
 
@@ -49,25 +49,25 @@ public class Zombie1 : MonoBehaviour
         playerInvisionRadius = Physics.CheckSphere(transform.position, visionRadius, PlayerLayer);
         playerInattackingRadius = Physics.CheckSphere(transform.position, attackingRadius, PlayerLayer);
 
-        if (!playerInvisionRadius && !playerInattackingRadius) Guard();
+        //if (!playerInvisionRadius && !playerInattackingRadius) Guard();
         if (playerInvisionRadius && !playerInattackingRadius) PursuePlayer();
         if (playerInvisionRadius && playerInattackingRadius) AttackPlayer();
     }
 
-    private void Guard()
-    {
-        if (Vector3.Distance(walkPoints[currentZombiePosition].transform.position, transform.position) < walkingPointRadius)
-        {
-            currentZombiePosition = Random.Range(0, walkPoints.Length);
-            if (currentZombiePosition >= walkPoints.Length)
-            {
-                currentZombiePosition = 0;
-            }
-        }
-        transform.position = Vector3.MoveTowards(transform.position, walkPoints[currentZombiePosition].transform.position, Time.deltaTime * zombieSpeed);
-        //change zombie facing
-        transform.LookAt(walkPoints[currentZombiePosition].transform.position);
-    }
+    //private void Guard()
+    //{
+    //    if (Vector3.Distance(walkPoints[currentZombiePosition].transform.position, transform.position) < walkingPointRadius)
+    //    {
+    //        currentZombiePosition = Random.Range(0, walkPoints.Length);
+    //        if (currentZombiePosition >= walkPoints.Length)
+    //        {
+    //            currentZombiePosition = 0;
+    //        }
+    //    }
+    //    transform.position = Vector3.MoveTowards(transform.position, walkPoints[currentZombiePosition].transform.position, Time.deltaTime * zombieSpeed);
+    //    //change zombie facing
+    //    transform.LookAt(walkPoints[currentZombiePosition].transform.position);
+    //}
 
     private void PursuePlayer()
     {

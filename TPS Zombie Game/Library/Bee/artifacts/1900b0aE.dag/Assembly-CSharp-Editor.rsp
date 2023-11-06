@@ -361,6 +361,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Editor/WalkPointEditor.cs"
+"Assets/Editor/WalkPointManagerWindow.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Attributes/PostProcessingModelEditorAttribute.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Models/AmbientOcclusionModelEditor.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Models/AntialiasingModelEditor.cs"
