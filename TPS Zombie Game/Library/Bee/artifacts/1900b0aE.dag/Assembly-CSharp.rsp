@@ -430,6 +430,7 @@
 "Assets/Scripts/SwitchCamera.cs"
 "Assets/Scripts/VehicleController.cs"
 "Assets/Scripts/WalkPoint.cs"
+"Assets/Scripts/WalkpointNavigation.cs"
 "Assets/Scripts/Zombie1.cs"
 "Assets/Scripts/Zombie2.cs"
 "Assets/Scripts/ZombieSpawn.cs"

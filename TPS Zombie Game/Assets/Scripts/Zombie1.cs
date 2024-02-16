@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Zombie1 : MonoBehaviour
 {
     [Header("Zombie Health and Damage")]
-    private float zombieHealth = 100f;
+    public float zombieHealth = 100f;
     private float presentHealth;
     public float giveDamage = 5f;
     public HealthBar healthBar;
@@ -18,11 +18,13 @@ public class Zombie1 : MonoBehaviour
     public Transform playerBody;
     public LayerMask PlayerLayer;
 
-    [Header("Zombie Guarding Var")]
-    //public GameObject[] walkPoints;
-    //int currentZombiePosition = 0;
+    [Header("Zombie Walking Var")]
     public float zombieSpeed;
-    float walkingPointRadius = 2;
+    public float turningSpeed = 300f;
+    public float stopSpeed = 1f;
+    float walkingPointRadius = 2f;
+    public Vector3 destination;
+    public bool destinationReached;
 
     [Header("Zombie Attacking Var")]
     public float timeBtwAttack;      //time between attack
@@ -30,6 +32,12 @@ public class Zombie1 : MonoBehaviour
 
     [Header("Zombie Animation")]
     public Animator anim;
+    //public float gravity = -9.81f;
+    //Vector3 velocity;
+    //public Transform surfaceCheck;
+    //bool onSurface;
+    //public float surfaceDistance = 0.4f;
+    //public LayerMask surfaceMask;
 
     [Header("Zombie mood/states")]
     public float visionRadius;             //ban kinh tam nhin
@@ -49,25 +57,50 @@ public class Zombie1 : MonoBehaviour
         playerInvisionRadius = Physics.CheckSphere(transform.position, visionRadius, PlayerLayer);
         playerInattackingRadius = Physics.CheckSphere(transform.position, attackingRadius, PlayerLayer);
 
-        //if (!playerInvisionRadius && !playerInattackingRadius) Guard();
+        //onSurface = Physics.CheckSphere(surfaceCheck.position, surfaceDistance, surfaceMask);
+
+        //if (onSurface && velocity.y < 0)
+        //{
+        //    velocity.y = -2f;
+        //}
+
+        //velocity.y += gravity * Time.deltaTime;
+
+        if (!playerInvisionRadius && !playerInattackingRadius) Walk();
+        //Walk();
         if (playerInvisionRadius && !playerInattackingRadius) PursuePlayer();
         if (playerInvisionRadius && playerInattackingRadius) AttackPlayer();
     }
+    public void Walk()
+    {
+        if (transform.position != destination)
+        {
+            Vector3 destinationDirection = destination - transform.position;
+            destinationDirection.y = 0;
+            float destinationDistance = destinationDirection.magnitude;
 
-    //private void Guard()
-    //{
-    //    if (Vector3.Distance(walkPoints[currentZombiePosition].transform.position, transform.position) < walkingPointRadius)
-    //    {
-    //        currentZombiePosition = Random.Range(0, walkPoints.Length);
-    //        if (currentZombiePosition >= walkPoints.Length)
-    //        {
-    //            currentZombiePosition = 0;
-    //        }
-    //    }
-    //    transform.position = Vector3.MoveTowards(transform.position, walkPoints[currentZombiePosition].transform.position, Time.deltaTime * zombieSpeed);
-    //    //change zombie facing
-    //    transform.LookAt(walkPoints[currentZombiePosition].transform.position);
-    //}
+            if (destinationDistance >= stopSpeed)
+            {
+                //Turning
+                destinationReached = false;
+                Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turningSpeed * Time.deltaTime);
+
+                //Move AI
+                transform.Translate(Vector3.forward * zombieSpeed * Time.deltaTime);
+            }
+            else
+            {
+                destinationReached = true;
+            }
+        }
+    }
+
+    public void locateDestination(Vector3 destination)
+    {
+        this.destination = destination;
+        destinationReached = false;
+    }
 
     private void PursuePlayer()
     {

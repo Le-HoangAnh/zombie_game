@@ -87,6 +87,7 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\BloomModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
     <Compile Include="Assets\Scripts\AmmoCourt.cs" />
+    <Compile Include="Assets\Scripts\WalkpointNavigation.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />

@@ -361,8 +361,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Editor/WalkPointEditor.cs"
-"Assets/Editor/WalkPointManagerWindow.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Attributes/PostProcessingModelEditorAttribute.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Models/AmbientOcclusionModelEditor.cs"
 "Assets/Flooded_Grounds/PostProcessing/Editor/Models/AntialiasingModelEditor.cs"
@@ -399,6 +397,8 @@
 "Assets/Flooded_Grounds/PostProcessing/Editor/Utils/ReflectionUtils.cs"
 "Assets/JMO Assets/Cartoon FX Easy Editor/Editor/CFXEasyEditor.cs"
 "Assets/JMO Assets/WarFX/Editor/CFX_SpawnSystemEditor.cs"
+"Assets/Scripts/Editor/WalkPointEditor.cs"
+"Assets/Scripts/Editor/WalkPointManagerWindow.cs"
 -langversion:9.0
 
 /deterministic
