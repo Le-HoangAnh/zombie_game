@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Flooded_Grounds/Scenes/ZombieLand.unity
-    guid: c0d944ca9defd20449bc336e50d75a08
+    path: Assets/Scenes/ZombieLand.unity
+    guid: 136dfcee647f2f547ba5310e280510b0
   - enabled: 1
-    path: Assets/Flooded_Grounds/Scenes/ZombieLand1.unity
-    guid: 8651fa6c1722ff54499c6ea078d1e019
+    path: Assets/Scenes/ZombieLand1.unity
+    guid: e2f7b15301f0a4d43b5c616cf71cacc8
   - enabled: 1
-    path: Assets/Flooded_Grounds/Scenes/ZombieLand2.unity
-    guid: 79c49ff34314a5c4f8e062b095efd0b6
+    path: Assets/Scenes/ZombieLand2.unity
+    guid: 43bade05d9d08fd4cad2a44e17659a14
   m_configObjects: {}

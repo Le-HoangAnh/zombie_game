@@ -17,7 +17,6 @@ public class RiflePickup : MonoBehaviour
     private float nextTimeToPunch = 0f;
     public float punchCharge = 15f;
     public ObjectiveComplete mission;
-    
 
     private void Awake()
     {

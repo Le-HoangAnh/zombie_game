@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     [Header("Player Movement")]
     public float playerSpeed = 2f;
-    public float playerSprint = 3f;
+    public float playerSprint = 10f;
 
     [Header("PLayer Health Things")]
     private float playerHealth = 100f;

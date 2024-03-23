@@ -6,7 +6,7 @@ public class Rifle : MonoBehaviour //rifle: sung truong
 {
     [Header("Rifle Things")]
     public Camera cam;
-    public float giveDamageOf = 10f;
+    private float giveDamageOf = 20f;
     public float shootingRange = 100f; //pham vi ngam ban
     public float fireCharge = 15f;
     private float nextTimeToShoot = 0f;
@@ -16,10 +16,10 @@ public class Rifle : MonoBehaviour //rifle: sung truong
     public GameObject rifleUI;
 
     [Header("Rifle Ammunition and shooting")] 
-    private int maximumAmmunition = 32;   //Ammunition: đạn dược
+    private int maximumAmmunition = 30;   //Ammunition: đạn dược
     public int mag = 10;                  //Magazine(mag): kho đạn dược
     private int presentAmmunition;
-    public float reloadingTime = 1.3f;
+    public float reloadingTime = 0.5f;
     private bool setReloading = false;
 
     [Header("Rifle effects")]

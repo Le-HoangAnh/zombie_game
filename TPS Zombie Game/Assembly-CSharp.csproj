@@ -109,7 +109,7 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\VignetteModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\GrainModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingModel.cs" />
-    <Compile Include="Assets\Scripts\ZombieSpawn.cs" />
+    <Compile Include="Assets\Scripts\ZombieZone.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\GrainComponent.cs" />
     <Compile Include="Assets\Scripts\WalkPoint.cs" />
     <Compile Include="Assets\Scripts\AmmoBoost.cs" />

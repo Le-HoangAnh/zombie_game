@@ -28,7 +28,7 @@ public class HealthBoost : MonoBehaviour
                 //sound effect
                 audioSource.PlayOneShot(healthBoostSound);
 
-                Object.Destroy(gameObject, 1.5f);
+                Object.Destroy(gameObject, 0.5f);
             }
         }
     }

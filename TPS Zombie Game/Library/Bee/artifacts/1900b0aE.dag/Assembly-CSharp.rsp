@@ -433,7 +433,7 @@
 "Assets/Scripts/WalkpointNavigation.cs"
 "Assets/Scripts/Zombie1.cs"
 "Assets/Scripts/Zombie2.cs"
-"Assets/Scripts/ZombieSpawn.cs"
+"Assets/Scripts/ZombieZone.cs"
 -langversion:9.0
 
 /deterministic

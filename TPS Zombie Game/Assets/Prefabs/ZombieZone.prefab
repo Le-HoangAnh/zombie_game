@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &510663937116658529
+--- !u!1 &2004518126514473041
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,62 +8,64 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 510663937116658532}
-  - component: {fileID: 510663937116658531}
-  - component: {fileID: 510663937116658530}
+  - component: {fileID: 1941637297892246760}
+  - component: {fileID: 7162609611762678436}
+  - component: {fileID: 1423189270775330794}
   m_Layer: 0
-  m_Name: DangerZone1
+  m_Name: DangerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &510663937116658532
+--- !u!4 &1941637297892246760
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510663937116658529}
+  m_GameObject: {fileID: 2004518126514473041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -158.57, y: 0, z: -6.1400146}
+  m_LocalPosition: {x: -31.02, y: 0, z: -26.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8766977867590744371}
+  m_Father: {fileID: 6782718743126509203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &510663937116658531
+--- !u!65 &7162609611762678436
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510663937116658529}
+  m_GameObject: {fileID: 2004518126514473041}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.549347, y: 6.891695, z: 2.439911}
-  m_Center: {x: -5.2232513, y: -1.7973013, z: 0.14378357}
---- !u!114 &510663937116658530
+  m_Size: {x: 22.159302, y: 6.891695, z: 2.439911}
+  m_Center: {x: -4.454712, y: -1.7973013, z: 0.14378357}
+--- !u!114 &1423189270775330794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510663937116658529}
+  m_GameObject: {fileID: 2004518126514473041}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dbdb0943a893424e9ba268ed3b719ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 0}
-  zombieSpawnPosition: {fileID: 0}
-  dangerZone1: {fileID: 0}
+  zombieSpawnPosition:
+  - {fileID: 0}
+  dangerZone: {fileID: 0}
+  zombieToSpawn: 0
   dangerZoneSound: {fileID: 8300000, guid: a5c2ef11c6680ac46bf6fc73193d8bd8, type: 3}
   audioSource: {fileID: 0}
---- !u!1 &3805922924250645599
+--- !u!1 &5798952888653403499
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,196 +73,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 793129057374686814}
-  - component: {fileID: 6044232997628154108}
-  - component: {fileID: 4522636127388639520}
-  m_Layer: 0
-  m_Name: DangerZone1.1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &793129057374686814
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3805922924250645599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.99005, y: 0, z: 0.6199951}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8766977867590744371}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6044232997628154108
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3805922924250645599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.778687, y: 6.891695, z: 3.5802002}
-  m_Center: {x: -5.554138, y: -1.7973013, z: -0.42636108}
---- !u!114 &4522636127388639520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3805922924250645599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbdb0943a893424e9ba268ed3b719ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 0}
-  zombieSpawnPosition: {fileID: 0}
-  dangerZone1: {fileID: 0}
-  dangerZoneSound: {fileID: 8300000, guid: a5c2ef11c6680ac46bf6fc73193d8bd8, type: 3}
-  audioSource: {fileID: 0}
---- !u!1 &4349065144932743153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4429736621004421960}
-  - component: {fileID: 4966681314476164356}
-  - component: {fileID: 3768297036901795914}
-  m_Layer: 0
-  m_Name: DangerZone1.3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4429736621004421960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349065144932743153}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8766977867590744371}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4966681314476164356
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349065144932743153}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.549347, y: 6.891695, z: 2.439911}
-  m_Center: {x: -5.2232513, y: -1.7973013, z: 0.14378357}
---- !u!114 &3768297036901795914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349065144932743153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbdb0943a893424e9ba268ed3b719ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 0}
-  zombieSpawnPosition: {fileID: 0}
-  dangerZone1: {fileID: 0}
-  dangerZoneSound: {fileID: 8300000, guid: a5c2ef11c6680ac46bf6fc73193d8bd8, type: 3}
-  audioSource: {fileID: 0}
---- !u!1 &6129340947557901488
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6709613058580885285}
-  - component: {fileID: 3635909281432235680}
-  - component: {fileID: 8383092405757727624}
-  m_Layer: 0
-  m_Name: DangerZone1.2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6709613058580885285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6129340947557901488}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -218.24002, y: 0, z: -1.3900146}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8766977867590744371}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3635909281432235680
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6129340947557901488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.83551, y: 6.891695, z: 2.953308}
-  m_Center: {x: -4.898407, y: -1.7973013, z: 1.1191711}
---- !u!114 &8383092405757727624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6129340947557901488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbdb0943a893424e9ba268ed3b719ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 0}
-  zombieSpawnPosition: {fileID: 0}
-  dangerZone1: {fileID: 0}
-  dangerZoneSound: {fileID: 8300000, guid: a5c2ef11c6680ac46bf6fc73193d8bd8, type: 3}
-  audioSource: {fileID: 0}
---- !u!1 &8642836240878332619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8766977867590744371}
+  - component: {fileID: 6782718743126509203}
   m_Layer: 0
   m_Name: ZombieZone
   m_TagString: Untagged
@@ -268,22 +81,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8766977867590744371
+--- !u!4 &6782718743126509203
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8642836240878332619}
+  m_GameObject: {fileID: 5798952888653403499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 652.96, y: 22.093588, z: 425.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 510663937116658532}
-  - {fileID: 793129057374686814}
-  - {fileID: 6709613058580885285}
-  - {fileID: 4429736621004421960}
+  - {fileID: 1941637297892246760}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -28,7 +28,7 @@ public class AmmoBoost : MonoBehaviour
                 //sound effect
                 audioSource.PlayOneShot(ammoBoostSound);
 
-                Object.Destroy(gameObject, 1.5f);
+                Object.Destroy(gameObject, 0.5f);
             }
         }
     }
