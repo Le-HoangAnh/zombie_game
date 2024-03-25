@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject endGameMenuUI;
     public GameObject objectiveMenuUI;
+    public GameObject winMenuUI;
 
     public static bool GameIsStopped = false;
 

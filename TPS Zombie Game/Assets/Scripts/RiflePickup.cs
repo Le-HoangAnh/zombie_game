@@ -50,7 +50,7 @@ public class RiflePickup : MonoBehaviour
 
                 //objective completed
                 mission.obj1 = true;
-                mission.GetObjectivesDone(true, false, false, false);
+                mission.GetObjectivesDone(true, false, false);
             }
         }
     }

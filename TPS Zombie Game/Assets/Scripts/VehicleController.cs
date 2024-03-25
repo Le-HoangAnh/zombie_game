@@ -38,6 +38,7 @@ public class VehicleController : MonoBehaviour
     public GameObject ThirdPersonCam;
     public GameObject ThirdPersonCanvas;
     public GameObject PlayerCharacter;
+    public ObjectiveComplete mission;
 
     [Header("Vehicle Hit Var")]
     public Camera cam;
@@ -55,7 +56,12 @@ public class VehicleController : MonoBehaviour
                 isOpened = true;
                 radius = 5000f;
                 //Objective complete
-                //ObjectiveComplete.occurrence.GetObjectivesDone(true, true, true, false);
+                mission.obj2 = true;
+                if (mission.obj1 == true && mission.obj2 == true)
+                {
+                    mission.GetObjectivesDone(true, true, false);
+                }
+                //mission.GetObjectivesDone(true, true, false);
             }
             else if (Input.GetKeyDown(KeyCode.G))
             {

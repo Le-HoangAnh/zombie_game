@@ -122,9 +122,8 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
     <Compile Include="Assets\Scripts\SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\RotateHealthBarUI.cs" />
-    <Compile Include="Assets\Scripts\Objective2.cs" />
+    <Compile Include="Assets\Scripts\Objective3.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\UserLutComponent.cs" />
-    <Compile Include="Assets\Scripts\Objective4.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />

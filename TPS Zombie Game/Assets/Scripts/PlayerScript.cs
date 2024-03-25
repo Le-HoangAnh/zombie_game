@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -16,7 +17,7 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Player Script Cameras")]
     public Transform playerCamera;
-    public GameObject EndGameMenuUI;
+    public GameObject endGameMenuUI;
 
     [Header("Player Animator and Gravity")]
     public CharacterController cC;
@@ -52,14 +53,14 @@ public class PlayerScript : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         cC.Move(velocity * Time.deltaTime);
 
-        PlayerMove();
+        playerMove();
 
         Jump();
 
         Sprint();
     }
 
-    void PlayerMove()
+    void playerMove()
     {
         float horizontal_axis = Input.GetAxisRaw("Horizontal");
         float vertical_axis = Input.GetAxisRaw("Vertical");
@@ -142,13 +143,13 @@ public class PlayerScript : MonoBehaviour
 
         if (presentHealth <= 0)
         {
-            PlayerDie();
+            playerDie();
         }
     }
 
-    private void PlayerDie()
+    private void playerDie()
     {
-        EndGameMenuUI.SetActive(true);
+        endGameMenuUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Object.Destroy(gameObject, 1.0f);
     }
@@ -159,4 +160,5 @@ public class PlayerScript : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         playerDamage.SetActive(false);
     }
+
 }
