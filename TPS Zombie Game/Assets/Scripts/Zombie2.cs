@@ -105,7 +105,7 @@ public class Zombie2 : MonoBehaviour
     public void zombieHitDamage(float takeDamage)
     {
         presentHealth -= takeDamage;
-        healthBar.GiveFullHealth(zombieHealth);
+        healthBar.SetHealth(presentHealth);
 
         if (presentHealth <= 0)
         {
